@@ -11,8 +11,14 @@ function createstore () {
     console.log(picture);
     
     // var greeting; 
-    var number = prompt("How many pieces of clothes do you want to buy?")
+    
 
+    while (write !== 'ac milan' && write !== 'inter milan'){
+        write = prompt("What is your favorite club?(ac milan,inter milan)")
+     }
+
+     var number = prompt("How many pieces of clothes do you want to buy?")
+     console.log(number);
     
      for (var i=0;i<number;i++) {
         if (write === "ac milan") {
@@ -21,13 +27,11 @@ function createstore () {
           else if (write === "inter milan") {
               picture = picture + '<img src="photos/inter.jpg" alt="ggg">';
           }
-          else {
-              picture = "try again please!"
-          }
+        //   else {
+        //       picture = "try again please!"
+        //   }
      }
-     while (write !== 'ac milan' && write !== 'inter milan'){
-        write = prompt("What is your favorite club?(ac milan,inter milan)")
-     }
+     
      
     // if (age > 0 && age<8   ) {     
     //     greeting = 'children clothes site';   
@@ -44,4 +48,4 @@ function createstore () {
 
 
 
-document.getElementById('result').innerText = createstore();
+document.getElementById('result').innerHTML = createstore();
